@@ -1,15 +1,17 @@
-<script setup>
+<script setup lang="ts">
+import { useData } from 'vitepress';
 import DefaultTheme, { VPImage } from 'vitepress/theme'
-import { withBase } from 'vitepress';
 
 const { Layout } = DefaultTheme
+const { frontmatter: fm } = useData()
+
 </script>
 
 <template>
   <Layout>
     <template #home-hero-image>
-      <img :src="withBase($frontmatter.hero.image1.src)" :alt="$frontmatter.hero.image1.alt" class="VPImage1"/>
-      <img :src="withBase($frontmatter.hero.image2.src)" :alt="$frontmatter.hero.image2.alt" class= "VPImage2"/>
+      <VPImage :image="fm.hero.image1" class="VPImage1"/>
+      <VPImage :image="fm.hero.image2" class= "VPImage2"/>
     </template>
     
     

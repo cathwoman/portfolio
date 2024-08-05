@@ -7,10 +7,10 @@ hero:
   text: "Vous trouverez ici mes projet en design web"
   tagline: Créer des expériences digitales inoubliables 
   image1:
-    src: /assets/Acceuil_PORTFOLIOS.png
+    src: /Acceuil_PORTFOLIOS.png
     alt: project_thé
   image2:
-    src: /assets/landing_page_desktop_peluche.jpg
+    src: /landing_page_desktop_peluche.jpg
     alt: project_peluche
   
   
