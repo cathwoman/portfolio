@@ -15,10 +15,10 @@ hero:
   
   
   actions:
-    - theme: Mes formations
+    - theme: brand
       text: Mes formations
       link: /formations/
-    - theme: Mes projets
+    - theme: alt
       text: Mes projets
       link: /projets/
   
@@ -37,18 +37,6 @@ features:
 <script setup lang="ts">
 </script>
 
-<!-- <style>
-.VPHero {
-  background-image: url("/assets/Acceuil_PORTFOLIOS.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  background-position-x: right;
-  margin-bottom: 20px;
- 
-  
-}
-</style> -->
 <style>
 .VPHero .main .name ,.VPHero .main .clip ,.VPHero .main .text{
   font-size: 48px;
