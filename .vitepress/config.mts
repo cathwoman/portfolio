@@ -2,9 +2,10 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My awesome portfolio",
-  description: "A portfolio for my projects made with VitePress",
+  title: "mon portfolios",
+  description: "Un site pour mes projets de design",
   base: '/portfolio/',
+  appearance: false,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -14,12 +15,12 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Formations',
+        link: '/formations/',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'OnlineFormaPro', link: '/formations/OnlineFormaPro'},
         ]
-      }
+      },
     ],
 
     socialLinks: [
