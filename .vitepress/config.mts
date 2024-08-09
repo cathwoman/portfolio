@@ -2,7 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "mon portfolios",
+  head: [['link', { rel: 'icon', href: '/portfolio/favicon.ico' }]],
+  title: "Catherine VU - Designer UX UI",
   description: "Un site pour mes projets de design",
   base: '/portfolio/',
   appearance: false,
@@ -10,7 +11,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      //{ text: '', link: '/' }//
     ],
 
     sidebar: [
@@ -25,6 +26,6 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+        ]
   }
 })

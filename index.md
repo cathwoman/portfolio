@@ -3,8 +3,8 @@
 layout: home 
 
 hero:
-  name: "Mon Porte-folio"
-  text: "Vous trouverez ici mes projet en design web"
+  name: "Catherine VU"
+  text: Prépare une alternance en Mastère Direction artistique UX UI
   tagline: Créer des expériences digitales inoubliables 
   image1:
     src: /Acceuil_PORTFOLIOS.png
@@ -21,25 +21,44 @@ hero:
     - theme: alt
       text: Mes projets
       link: /projets/
-  
-  
 
+#  definir le besoin du recruteur 
+# présentation
+# Dire que je suis la personne idéal formation et expériences et savoir etre donc comment je repond à leur besoin
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+![alt text](/Accueil_mariee_sauvage_coupe.png)
+
+<div class="container-project">
+  <div class="container-the" >
+        <VPButton
+          tag="button"
+          size="medium"
+          theme="brand"
+          alin-items="center"
+          text="Plonger dans mon univers créatif"
+          href="https://www.behance.net/catherinevu1"
+        />
+    
+  </div>
+</div>
+
 <script setup lang="ts">
+
+import { VPButton } from 'vitepress/theme';
+
 </script>
 
 <style>
-.VPHero .main .name ,.VPHero .main .clip ,.VPHero .main .text{
+.VPHero .main .name ,.VPHero .main .clip{
   font-size: 48px;
+}
+
+.VPHero .main .text{
+  font-size: 36px;    
+  
+  
 }
 
 .VPHero .VPImage {
@@ -71,5 +90,15 @@ features:
   position: absolute;
   width: 400px; /* Set a width for the image */
   height: auto;
+}
+
+.VPHome .VPButton {
+  text-decoration: none;
+}
+
+.container, .container-the, .container-project{
+  display: flex;
+  justify-content: center;
+
 }
 </style>
