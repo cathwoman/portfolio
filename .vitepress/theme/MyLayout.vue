@@ -11,11 +11,8 @@ const { frontmatter: fm } = useData()
   <Layout>
     <template #home-hero-image>
       <VPImage :image="fm.hero.image1" class="VPImage1"/>
-      <VPImage :image="fm.hero.image2" class= "VPImage2"/>
+      <VPImage :image="fm.hero.image2" class="VPImage2"/>
     </template>
-    
-    
-    
   </Layout>
 </template>
 

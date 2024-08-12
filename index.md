@@ -28,25 +28,29 @@ hero:
 
 ---
 
-![alt text](/Accueil_mariee_sauvage_coupe.png)
+<ProjectCard
+  title="Mariée Sauvage"
+  description="projet trop cool"
+  href="https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z"
+  image="/Accueil_mariee_sauvage_coupe.webp"
+/>
 
-<div class="container-project">
-  <div class="container-the" >
-        <VPButton
-          tag="button"
-          size="medium"
-          theme="brand"
-          alin-items="center"
-          text="Plonger dans mon univers créatif"
-          href="https://www.behance.net/catherinevu1"
-        />
-    
-  </div>
-</div>
+<!-- ![alt text](/Accueil_mariee_sauvage_coupe.png) -->
+
+<VPButton
+  tag="button"
+  size="medium"
+  theme="brand"
+  alin-items="center"
+  text="Plonger dans mon univers créatif"
+  href="https://www.behance.net/catherinevu1"
+/>
 
 <script setup lang="ts">
 
-import { VPButton } from 'vitepress/theme';
+import { VPButton } from 'vitepress/theme'
+
+import ProjectCard from './components/ProjectCard.vue'
 
 </script>
 
@@ -57,8 +61,6 @@ import { VPButton } from 'vitepress/theme';
 
 .VPHero .main .text{
   font-size: 36px;    
-  
-  
 }
 
 .VPHero .VPImage {
@@ -92,13 +94,15 @@ import { VPButton } from 'vitepress/theme';
   height: auto;
 }
 
+.ProjectCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .VPHome .VPButton {
   text-decoration: none;
 }
 
-.container, .container-the, .container-project{
-  display: flex;
-  justify-content: center;
-
-}
 </style>
