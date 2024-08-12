@@ -30,12 +30,10 @@ hero:
 
 <ProjectCard
   title="Mariée Sauvage"
-  description="projet trop cool"
+  description="Dans ce projet "
   href="https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z"
   image="/Accueil_mariee_sauvage_coupe.webp"
 />
-
-<!-- ![alt text](/Accueil_mariee_sauvage_coupe.png) -->
 
 <VPButton
   tag="button"
@@ -55,6 +53,10 @@ import ProjectCard from './components/ProjectCard.vue'
 </script>
 
 <style>
+  body {
+    background-color: #f9f9f9;
+  }
+
 .VPHero .main .name ,.VPHero .main .clip{
   font-size: 48px;
 }

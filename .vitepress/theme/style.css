@@ -51,7 +51,7 @@
 
   --vp-c-brand-1: var(--vp-c-indigo-1);
   --vp-c-brand-2: #d63ad8; 
-  --vp-c-brand-2: #eebdef;
+  /* --vp-c-brand-2: #eebdef; */
   --vp-c-brand-3: #D969DB; // couleur du bouton mes formations
   --vp-c-brand-soft: var(--vp-c-indigo-soft);
 
