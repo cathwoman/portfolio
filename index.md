@@ -7,7 +7,7 @@ hero:
   text: Prépare une alternance en Mastère Direction artistique UX UI
   tagline: Créer des expériences digitales inoubliables 
   image1:
-    src: /Acceuil_PORTFOLIOS.png
+    src: /Accueil_the.png
     alt: project_thé
   image2:
     src: /landing_page_desktop_peluche.jpg
@@ -20,7 +20,7 @@ hero:
       link: /formations/
     - theme: alt
       text: Mes projets
-      link: /projets/
+      link: /#mes-projets
 
 #  definir le besoin du recruteur 
 # présentation
@@ -28,19 +28,36 @@ hero:
 
 ---
 
-<ProjectCard
-  title="Mariée Sauvage"
-  description="Dans ce projet "
-  href="https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z"
-  image="/Accueil_mariee_sauvage_coupe.webp"
+## Mes projets 
+
+<div class="container-card">
+  <ProjectCard
+  title="Les thés du mondes"
+  href="https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde"
+  image="/Accueil_the.png"
 />
+
+  <ProjectCard
+    title="Mariée Sauvage"
+    href="https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z"
+    image="/Accueil_mariee_sauvage_coupe.webp"
+  />
+
+  <ProjectCard
+    title="Sizodor"
+    href="https://www.figma.com/proto/nMsZgDg1NYrGEVm3zODKfm/Sizodor?page-id=69%3A1261&node-id=67-443&viewport=1848%2C878%2C0.06&t=rGdaUooJefCVKPsx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=67%3A443"
+    image="/Accueil_sizodor.png"
+  />
+</div>
+
+
 
 <VPButton
   tag="button"
   size="medium"
   theme="brand"
   alin-items="center"
-  text="Plonger dans mon univers créatif"
+  text="Plongez dans mon univers créatif"
   href="https://www.behance.net/catherinevu1"
 />
 
@@ -53,6 +70,11 @@ import ProjectCard from './components/ProjectCard.vue'
 </script>
 
 <style>
+  h2 {
+  align-items: center;
+  text-align: center;
+  }
+
   body {
     background-color: #f9f9f9;
   }
@@ -107,4 +129,9 @@ import ProjectCard from './components/ProjectCard.vue'
   text-decoration: none;
 }
 
+  .container-card{
+  display: flex;
+  flex-direction: column;
+
+  }
 </style>

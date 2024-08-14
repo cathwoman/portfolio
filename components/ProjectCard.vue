@@ -9,37 +9,37 @@ const { title, description, href, image } = props
 </script>
 
 <template>
-  <a :href="href" target="_blank" style="text-decoration: none; color: inherit;">
-    <div class="card">  
-      <button type="button" class="button-card-image" :href="href"><img :src="withBase(image)" alt="Image description" class="card-image"/></button>
-      <div class="card-content">
-        <h3 class="card-title">{{ title }}</h3>//
-        <p class="card-text">{{ description }}</p>
-      </div>
+  <div class="card">  
+      <a :href="href" target="_blank" style="text-decoration: none; color: inherit;">
+        <img :src="withBase(image)" alt="Image description" class="card-image"/>
+        <div class="card-content">
+          <h3 class="card-title">{{ title }}</h3>
+          <p class="card-text">{{ description }}</p>
+        </div>
+      </a>
     </div>
     
-  </a>
 </template>
 
 <style lang="css" scoped>
 .card {
   display: flex;
   flex-direction: column;
-  /* border: 3px solid #ccc; */
-  border: 0px 2px 5px solid gray;
+  /* border: 1px solid gray; */
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 20px;
   align-items: center;
   justify-content: center;
   object-fit: cover;
-  max-width: 200px;
-  max-height: ;
-  
+  max-width: 50%;
+  max-height: 50%;
+  position: relative;
+  transition: transform .2s; /* Animation */
 }
 
 .card:hover{
-  box-shadow: 0px 2px 5px gray;
+  transform: scale(1.05);
 }
 .card-image {
   width: 100%;
@@ -47,22 +47,35 @@ const { title, description, href, image } = props
   border-radius: 5px;
 }
 
+.card-image:hover{
+  box-shadow: 0px 2px 5px rgb(128, 128, 128);
+}
+
 .card-content {
+  position: absolute; /* Position the content absolutely within the card */
+  bottom: 8px;
+  left: 15px;
+  right: 15px;
+  padding: 10px;
   margin-top: 10px;
+  text-align: center; 
+  background-color: rgba(255, 255, 255, 0.63); /*Add a semi-transparent background*/
 }
 
 .card-title {
   font-size: 1.2em;
   font-weight: bold;
+  margin: 20px 20px 20px 20px;
+  color: #333;
 }
 
 .card-text {
   font-size: 0.9em;
   line-height: 1.5;
+  margin: 20px 20px 20px 20px;
+  color: #333;
 }
 
-.button-card-image{
-  align-items: center;
-  
-}
+
+
 </style>
