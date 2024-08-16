@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { withBase } from 'vitepress';
 
 const props = defineProps(['title', 'description', 'href', 'image'])
@@ -9,16 +8,16 @@ const { title, description, href, image } = props
 </script>
 
 <template>
-  <div class="card">  
-      <a :href="href" target="_blank" style="text-decoration: none; color: inherit;">
-        <img :src="withBase(image)" alt="Image description" class="card-image"/>
-        <div class="card-content">
-          <h3 class="card-title">{{ title }}</h3>
-          <p class="card-text">{{ description }}</p>
-        </div>
-      </a>
-    </div>
-    
+  <div class="card">
+    <a :href="href" target="_blank" style="text-decoration: none; color: inherit;">
+      <img :src="withBase(image)" alt="Description" class="card-image" />
+      <div class="card-content">
+        <h3 class="card-title">{{ title }}</h3>
+        <p class="card-text">{{ description }}</p>
+      </div>
+    </a>
+  </div>
+
 </template>
 
 <style lang="css" scoped>
@@ -35,31 +34,35 @@ const { title, description, href, image } = props
   max-width: 50%;
   max-height: 50%;
   position: relative;
-  transition: transform .2s; /* Animation */
+  transition: transform .2s;
+  /* Animation */
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.05);
 }
+
 .card-image {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
-.card-image:hover{
+.card-image:hover {
   box-shadow: 0px 2px 5px rgb(128, 128, 128);
 }
 
 .card-content {
-  position: absolute; /* Position the content absolutely within the card */
+  position: absolute;
+  /* Position the content absolutely within the card */
   bottom: 8px;
   left: 15px;
   right: 15px;
   padding: 10px;
   margin-top: 10px;
-  text-align: center; 
-  background-color: rgba(255, 255, 255, 0.63); /*Add a semi-transparent background*/
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.63);
+  /*Add a semi-transparent background*/
 }
 
 .card-title {
@@ -75,7 +78,4 @@ const { title, description, href, image } = props
   margin: 20px 20px 20px 20px;
   color: #333;
 }
-
-
-
 </style>

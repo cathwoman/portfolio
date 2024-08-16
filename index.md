@@ -28,7 +28,7 @@ hero:
 
 ---
 
-## Mes projets 
+## Mes projets
 
 <div class="container-card">
   <ProjectCard
@@ -49,8 +49,6 @@ hero:
     image="/Accueil_sizodor.png"
   />
 </div>
-
-
 
 <VPButton
   tag="button"
@@ -84,7 +82,7 @@ import ProjectCard from './components/ProjectCard.vue'
 }
 
 .VPHero .main .text{
-  font-size: 36px;    
+  font-size: 36px;
 }
 
 .VPHero .VPImage {
@@ -101,7 +99,7 @@ import ProjectCard from './components/ProjectCard.vue'
   filter: drop-shadow(5px 5px 5px gray);
   background-size: 500px;
   z-index: -2;
-  position: absolute; 
+  position: absolute;
   left: 40px;
   width: 500px; /* Set a width for the image */
   height: auto;  
