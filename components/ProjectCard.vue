@@ -23,16 +23,12 @@ const { title, description, href, image } = props
 <style lang="css" scoped>
 .card {
   display: flex;
-  flex-direction: column;
-  /* border: 1px solid gray; */
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 20px;
   align-items: center;
   justify-content: center;
   object-fit: cover;
-  max-width: 50%;
-  max-height: 50%;
   position: relative;
   transition: transform .2s;
   /* Animation */
