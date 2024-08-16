@@ -30,12 +30,12 @@ hero:
 
 ## Mes projets
 
-<div class="container-card">
+<div class="grid grid-cols-1 gap-10 content-center">
   <ProjectCard
-  title="Les thés du mondes"
-  href="https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde"
-  image="/Accueil_the.png"
-/>
+    title="Les thés du mondes"
+    href="https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde"
+    image="/Accueil_the.png"
+  />
 
   <ProjectCard
     title="Mariée Sauvage"
@@ -114,13 +114,6 @@ import ProjectCard from './components/ProjectCard.vue'
   position: absolute;
   width: 400px; /* Set a width for the image */
   height: auto;
-}
-
-.ProjectCard{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .VPHome .VPButton {

@@ -2,6 +2,7 @@
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import MyLayout from './MyLayout.vue'
+import '../../postcss.config'
 import './style.css'
 
 export default {

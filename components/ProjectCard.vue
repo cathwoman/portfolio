@@ -23,40 +23,38 @@ const { title, description, href, image } = props
 <style lang="css" scoped>
 .card {
   display: flex;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 20px;
+  /* border-radius: 5px; */
+  /* padding: 15px; */
+  /* margin-bottom: 20px; */
   align-items: center;
   justify-content: center;
-  object-fit: cover;
+  /* object-fit: cover; */
   position: relative;
-  transition: transform .2s;
-  /* Animation */
 }
 
 .card:hover {
   transform: scale(1.05);
-}
-
-.card-image {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.card-image:hover {
   box-shadow: 0px 2px 5px rgb(128, 128, 128);
 }
 
+.card-image {
+  object-fit: fill;
+}
+
+/* .card-image:hover {
+  box-shadow: 0px 2px 5px rgb(128, 128, 128);
+} */
+
 .card-content {
-  position: absolute;
+  /* position: absolute; */
   /* Position the content absolutely within the card */
-  bottom: 8px;
+  /* bottom: 8px;
   left: 15px;
   right: 15px;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 10px; */
   text-align: center;
+  object-fit: cover;
   background-color: rgba(255, 255, 255, 0.63);
   /*Add a semi-transparent background*/
 }
