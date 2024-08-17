@@ -35,18 +35,21 @@ hero:
     title="Les thés du mondes"
     href="https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde"
     image="/Accueil_the.png"
+    description="Maquette de site vitrine fictif pour une marque de thé"
   />
 
   <ProjectCard
     title="Mariée Sauvage"
     href="https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z"
     image="/Accueil_mariee_sauvage_coupe.webp"
+    description="Maquette de site e-commerce pour une marque de robe de mariée"
   />
 
   <ProjectCard
     title="Sizodor"
     href="https://www.figma.com/proto/nMsZgDg1NYrGEVm3zODKfm/Sizodor?page-id=69%3A1261&node-id=67-443&viewport=1848%2C878%2C0.06&t=rGdaUooJefCVKPsx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=67%3A443"
     image="/Accueil_sizodor.png"
+    description="Maquette de site e-commerce pour une marque de peluche"
   />
 </div>
 
