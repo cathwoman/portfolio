@@ -19,13 +19,16 @@ export default defineConfig({
         text: 'Formations',
         link: '/formations/',
         items: [
-          { text: 'OnlineFormaPro', link: '/formations/OnlineFormaPro'},
-        ]
+          { text: 'Concepteur designer UI', link: '/formations/concepteur_designer_ui'},
+          { text: 'SNIR', link: '/formations/snir'},
+          { text: 'STL', link: '/formations/stl'},
+        ],
+  
       },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/cathwoman' }
         ]
   }
 })

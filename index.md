@@ -29,8 +29,10 @@ hero:
 ---
 
 ## Mes projets
-
-<div class="grid grid-cols-1 gap-10 content-center">
+<!-- <div>Dans cette partie, vous pourrez observer les projet que j'ai pu créer lors de mon année en formation de design. vous les retrouverez ci-dessous:</div>
+<br> -->
+<br>
+<div class="grid grid-cols-2 gap-10 content-center">
   <ProjectCard
     title="Les thés du mondes"
     href="https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde"
@@ -51,16 +53,32 @@ hero:
     image="/Accueil_sizodor.png"
     description="Maquette de site e-commerce pour une marque de peluche"
   />
+
+</div>
+<div class="flex justify-center items-center">
+  <VPButton
+    tag="button"
+    size="medium"
+    theme="brand"
+    alin-items="center"
+    text="Plongez dans mon univers créatif"
+    href="https://www.behance.net/catherinevu1"
+    class="mt-10 hover:bg-brand-hover"
+  />
 </div>
 
-<VPButton
-  tag="button"
-  size="medium"
-  theme="brand"
-  alin-items="center"
-  text="Plongez dans mon univers créatif"
-  href="https://www.behance.net/catherinevu1"
-/>
+
+## A propos de moi
+<br>
+<!-- <div class="grid grid-cols-2 gap-10 content-center"> -->
+  <div>
+   Passionnée par la création d'expériences digitales intuitives et esthétiques, je suis actuellement en alternance pour un Mastère en Direction Artistique UX/UI. Mes compétences en design graphique, UX design et UI design me permettent de concevoir des interfaces utilisateur à la fois fonctionnelles et visuellement attrayantes.
+  </div>
+  <img href="/photo_identite.jpeg"  />
+
+<!-- </div> -->
+
+
 
 <script setup lang="ts">
 
@@ -74,50 +92,53 @@ import ProjectCard from './components/ProjectCard.vue'
   h2 {
   align-items: center;
   text-align: center;
+  
   }
 
   body {
     background-color: #f9f9f9;
   }
 
-.VPHero .main .name ,.VPHero .main .clip{
-  font-size: 48px;
-}
+  .VPHero .main .name ,.VPHero .main .clip{
+    font-size: 48px;
+  }
 
-.VPHero .main .text{
-  font-size: 36px;
-}
+  .VPHero .main .text{
+    font-size: 36px;
+  }
 
-.VPHero .VPImage {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  background-position-x: right;
-  margin-bottom: 20px;
-  position: absolute, top, left;
-  
-}
+  .VPHero .VPImage {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: right;
+    margin-bottom: 20px;
+    position: absolute, top, left;
+    
+  }
 
-.VPImage1{
-  filter: drop-shadow(5px 5px 5px gray);
-  background-size: 500px;
-  z-index: -2;
-  position: absolute;
-  left: 40px;
-  width: 500px; /* Set a width for the image */
-  height: auto;  
-}
+ 
 
-.VPImage2{
-  filter: drop-shadow(10px 10px 5px gray);
-  background-size: 500px;
-  z-index: -1;
-  left: 190px;
-  top: 120px;
-  position: absolute;
-  width: 400px; /* Set a width for the image */
-  height: auto;
-}
+  .VPImage1{
+    filter: drop-shadow(5px 5px 5px gray);
+    background-size: 500px;
+    z-index: -2;
+    position: absolute;
+    left: 40px;
+    width: 500px; /* Set a width for the image */
+    height: auto;  
+  }
+
+  .VPImage2{
+    filter: drop-shadow(10px 10px 5px gray);
+    background-size: 500px;
+    z-index: -1;
+    left: 190px;
+    top: 120px;
+    position: absolute;
+    width: 400px; /* Set a width for the image */
+    height: auto;
+  }
 
 .VPHome .VPButton {
   text-decoration: none;
@@ -128,4 +149,33 @@ import ProjectCard from './components/ProjectCard.vue'
   flex-direction: column;
 
   }
+
+  .VPHome .VPButton {
+    text-decoration: none;
+  }
+
+  .container-card{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .column {
+    float: left;
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .row {margin: 0 -5px;}
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;}
+
+  * {
+    box-sizing: border-box;
+  }
+
 </style>
