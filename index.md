@@ -22,15 +22,9 @@ hero:
       text: Mes projets
       link: /#mes-projets
 
-#  definir le besoin du recruteur 
-# présentation
-# Dire que je suis la personne idéal formation et expériences et savoir etre donc comment je repond à leur besoin
-
 ---
 
 ## Mes projets
-<!-- <div>Dans cette partie, vous pourrez observer les projet que j'ai pu créer lors de mon année en formation de design. vous les retrouverez ci-dessous:</div>
-<br> -->
 <br/>
 <div class="grid grid-cols-2 gap-10 content-center">
   <ProjectCard
@@ -56,27 +50,47 @@ hero:
 </div>
 
 <div class="flex justify-center items-center">
-  <VPButton
-    tag="button"
-    size="medium"
-    theme="brand"
-    alin-items="center"
-    text="Plongez dans mon univers créatif"
-    href="https://www.behance.net/catherinevu1"
-    class="mt-10 hover:bg-brand-hover"
-  />
+  
 </div>
 
+<br/>
+<br/>
 
-## A propos de moi
-
- Passionnée par la création d'expériences digitales intuitives et esthétiques, je suis actuellement en alternance pour un Mastère en Direction Artistique UX/UI. Mes compétences en design graphique, UX design et UI design me permettent de concevoir des interfaces utilisateur à la fois fonctionnelles et visuellement attrayantes.
-<!-- ![Me](/photo_identite.jpeg) -->
-<VPImage image="/photo_identite.jpeg" alt="Me" class="grid grid-cols-2 gap-10 z-0 object-fit-cover content-center absolute" />
-
-
-
-
+<!-- https://tailwindflex.com/@steven-kuhn/about-me-section -->
+<section class="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16 shadow-xl">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid items-center grid-cols-1 md:grid-cols-2">
+          <div>
+              <h3 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">À propos de moi
+              </h3>
+              <p class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 dark:text-gray-300 md:mt-8">
+                  Passionnée par la création d'expériences digitales intuitives et esthétiques, je suis actuellement en alternance pour un Mastère en Direction Artistique UX/UI. Mes compétences en design graphique, UX design et UI design me permettent de concevoir des interfaces utilisateur à la fois fonctionnelles et visuellement attrayantes.
+              </p>
+              <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 md:mt-8">
+                  <span class="relative inline-block">
+                      <span class="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300 dark:bg-gray-900"></span>
+                  <span class="relative"> Mon profil vous intéresse ? </span>
+                  </span>
+                  <br class="block sm:hidden" />  Contactez moi sur <a href="https://www.linkedin.com/in/catherinevu436-78/" title=""
+                      class="transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline">Linkedin</a> !
+              </p>
+              <VPButton
+                tag="button"
+                size="medium"
+                theme="brand"
+                alin-items="center"
+                text="Plongez dans mon univers créatif"
+                href="https://www.behance.net/catherinevu1"
+                class="mt-10 hover:bg-brand-hover"
+                style="text-decoration: none;"
+              />
+          </div>
+          <div class="relative">
+            <VPImage image="/photo_identite.jpeg" alt="Me" class="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" />
+          </div>
+      </div>
+    </div>
+</section>
 
 <script setup lang="ts">
 
@@ -97,38 +111,11 @@ import ProjectCard from './components/ProjectCard.vue'
     background-color: #f9f9f9;
   }
 
-  .VPHero .main .name ,.VPHero .main .clip{
+  /* .VPHero .main .name ,.VPHero .main .clip{
     font-size: 48px;
   }
 
   .VPHero .main .text{
     font-size: 36px;
-  }
-
-
-  .VPHome .VPButton {
-    text-decoration: none;
-  }
-
-  .VPHome .VPButton {
-    text-decoration: none;
-  }
-
-  .column {
-    float: left;
-    width: 90%;
-    padding: 0 10px;
-  }
-
-  .row {margin: 0 -5px;}
-
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;}
-
-  * {
-    box-sizing: border-box;
-  }
+  } */
 </style>

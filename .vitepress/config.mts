@@ -11,24 +11,19 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      //{ text: '', link: '/' }//
     ],
 
     sidebar: [
       {
         text: 'Formations',
         link: '/formations/',
-        items: [
-          { text: 'Concepteur designer UI', link: '/formations/concepteur_designer_ui'},
-          { text: 'SNIR', link: '/formations/snir'},
-          { text: 'STL', link: '/formations/stl'},
-        ],
-  
+
       },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/cathwoman' }
-        ]
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/catherinevu436-78/' },
+      { icon: 'github', link: 'https://github.com/cathwoman' },
+    ]
   }
 })
