@@ -26,13 +26,13 @@ hero:
 
 ## Mes projets
 <br/>
-<div class="grid grid-cols-2 gap-10 content-center">
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-10 content-center justify-center">
   <ProjectCard
     title="Les thés du mondes"
     href="https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde"
     image="/Accueil_the.png"
     description="Maquette de site vitrine fictif pour une marque de thé"
-  />
+   />
 
   <ProjectCard
     title="Mariée Sauvage"
@@ -56,6 +56,8 @@ hero:
 <br/>
 <br/>
 
+
+### À propos de moi
 <!-- https://tailwindflex.com/@steven-kuhn/about-me-section -->
 <section class="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16 shadow-xl">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -111,11 +113,11 @@ import ProjectCard from './components/ProjectCard.vue'
     background-color: #f9f9f9;
   }
 
-  /* .VPHero .main .name ,.VPHero .main .clip{
+  .VPHero .main .name ,.VPHero .main .clip{
     font-size: 48px;
   }
 
   .VPHero .main .text{
     font-size: 36px;
-  } */
+  }
 </style>
