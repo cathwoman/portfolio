@@ -57,7 +57,7 @@ hero:
 <br/>
 
 
-### À propos de moi
+### Pour en savoir un peu plus sur moi... 
 <!-- https://tailwindflex.com/@steven-kuhn/about-me-section -->
 <section class="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16 shadow-xl">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -70,7 +70,7 @@ hero:
               </p>
               <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 md:mt-8">
                   <span class="relative inline-block">
-                      <span class="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300 dark:bg-gray-900"></span>
+                      <span class="absolute inline-block w-full bottom-0.5 h-2 bg-fuchsia-300 dark:bg-gray-900"></span>
                   <span class="relative"> Mon profil vous intéresse ? </span>
                   </span>
                   <br class="block sm:hidden" />  Contactez moi sur <a href="https://www.linkedin.com/in/catherinevu436-78/" title=""
@@ -83,7 +83,7 @@ hero:
                 alin-items="center"
                 text="Plongez dans mon univers créatif"
                 href="https://www.behance.net/catherinevu1"
-                class="mt-10 hover:bg-brand-hover"
+                class="mt-10 hover:bg-brand-hover justify-center items-center hover:bg-brand-hover "
                 style="text-decoration: none;"
               />
           </div>
