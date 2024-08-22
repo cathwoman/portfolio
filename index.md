@@ -59,39 +59,38 @@ hero:
 
 ### Pour en savoir un peu plus sur moi... 
 <!-- https://tailwindflex.com/@steven-kuhn/about-me-section -->
-<section class="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16 shadow-xl">
-    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div class="grid items-center grid-cols-1 md:grid-cols-2">
-          <div>
-              <h3 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">À propos de moi
-              </h3>
-              <p class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 dark:text-gray-300 md:mt-8">
-                  Passionnée par la création d'expériences digitales intuitives et esthétiques, je suis actuellement en alternance pour un Mastère en Direction Artistique UX/UI. Mes compétences en design graphique, UX design et UI design me permettent de concevoir des interfaces utilisateur à la fois fonctionnelles et visuellement attrayantes.
-              </p>
-              <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 md:mt-8">
-                  <span class="relative inline-block">
-                      <span class="absolute inline-block w-full bottom-0.5 h-2 bg-fuchsia-300 dark:bg-gray-900"></span>
-                  <span class="relative"> Mon profil vous intéresse ? </span>
-                  </span>
-                  <br class="block sm:hidden" />  Contactez moi sur <a href="https://www.linkedin.com/in/catherinevu436-78/" title=""
-                      class="transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline">Linkedin</a> !
-              </p>
-              <VPButton
-                tag="button"
-                size="medium"
-                theme="brand"
-                alin-items="center"
-                text="Plongez dans mon univers créatif"
-                href="https://www.behance.net/catherinevu1"
-                class="mt-10 hover:bg-brand-hover justify-center items-center hover:bg-brand-hover "
-                style="text-decoration: none;"
-              />
-          </div>
-          <div class="relative">
-            <VPImage image="/photo_identite.jpeg" alt="Me" class="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" />
-          </div>
+<section class="overflow-hidden bg-gray-50 dark:bg-gray-800 shadow-xl dark:shadow-none rounded-xl">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <div class="grid items-center grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="grid items-center grid-cols-1">
+        <h3 class="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl">À propos de moi</h3>
+          <p class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 dark:text-gray-300 md:mt-8">
+            Passionnée par la création d'expériences digitales intuitives et esthétiques, je suis actuellement en alternance pour un Mastère en Direction Artistique UX/UI. Mes compétences en design graphique, UX design et UI design me permettent de concevoir des interfaces utilisateur à la fois fonctionnelles et visuellement attrayantes.
+          </p>
+          <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 md:mt-8">
+            <span class="relative inline-block">
+              <span class="absolute inline-block w-full bottom-0.5 h-2 bg-fuchsia-300 dark:bg-gray-800"></span>
+              <span class="relative"> Mon profil vous intéresse ? </span>
+            </span>
+            <br class="block sm:hidden" />
+            Contactez moi sur <a href="https://www.linkedin.com/in/catherinevu436-78/" title=""
+              class="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline">Linkedin</a> !
+          </p>
+          <VPButton
+            tag="button"
+            size="medium"
+            theme="brand"
+            text="Plongez dans mon univers créatif"
+            href="https://www.behance.net/catherinevu1"
+            class="mt-10 hover:bg-brand-hover hover:bg-brand-hover mx-auto"
+            style="text-decoration: none;"
+          />
+      </div>
+      <div class="relative">
+        <VPImage image="/photo_identite.jpeg" alt="Me" class="relative rounded-xl h-full object-contain" />
       </div>
     </div>
+  </div>
 </section>
 
 <script setup lang="ts">
@@ -102,11 +101,10 @@ import ProjectCard from './components/ProjectCard.vue'
 
 </script>
 
-<style>
+<style scoped>
   h2 {
-  align-items: center;
-  text-align: center;
-  
+    align-items: center;
+    text-align: center;
   }
 
   body {
