@@ -47,13 +47,18 @@ hero:
     image="/Accueil_sizodor.png"
     description="Maquette de site pour un centre de coiffure"
   />
+
+
 </div>
 
 <div class="flex justify-center items-center">
+
   
 </div>
 
 <br/>
+
+
 <br/>
 
 
@@ -74,7 +79,7 @@ hero:
             </span>
             <br class="block sm:hidden" />
             Contactez moi sur <a href="https://www.linkedin.com/in/catherinevu436-78/" title=""
-              class="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline">Linkedin</a> !
+              class="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline">Linkedin</a>
           </p>
           <VPButton
             tag="button"
@@ -82,7 +87,7 @@ hero:
             theme="brand"
             text="Plongez dans mon univers créatif"
             href="https://www.behance.net/catherinevu1"
-            class="mt-10 hover:bg-brand-hover hover:bg-brand-hover mx-auto"
+            class=" hover:animate-bounce bg-brand-hover hover:bg-brand-hover mx-auto"
             style="text-decoration: none;"
           />
       </div>
@@ -102,6 +107,7 @@ import ProjectCard from './components/ProjectCard.vue'
 </script>
 
 <style scoped>
+
   h2 {
     align-items: center;
     text-align: center;
@@ -115,6 +121,34 @@ import ProjectCard from './components/ProjectCard.vue'
     font-size: 48px;
   }
 
+  .VPHero .main .name { 
+  /* ... other styles ... */
+  animation: showup 3s infinite; /* Apply the animation */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); 
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+  
   .VPHero .main .text{
     font-size: 36px;
   }
