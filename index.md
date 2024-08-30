@@ -24,7 +24,10 @@ hero:
 
 ---
 
+<div class="bg-blue-100 m-0 md!pb-10 px-5 lg:px-5 pb-5" >
+ 
 ## Mes projets
+
 <br/>
 <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-10 content-center justify-center">
   <ProjectCard
@@ -47,20 +50,12 @@ hero:
     image="/Accueil_sizodor.png"
     description="Maquette de site pour un centre de coiffure"
   />
-
-
 </div>
-
-<div class="flex justify-center items-center">
-
-  
+  <div class="flex justify-center items-center"> 
 </div>
 
 <br/>
-
-
 <br/>
-
 
 ### Pour en savoir un peu plus sur moi... 
 <!-- https://tailwindflex.com/@steven-kuhn/about-me-section -->
@@ -87,7 +82,7 @@ hero:
             theme="brand"
             text="Plongez dans mon univers créatif"
             href="https://www.behance.net/catherinevu1"
-            class=" hover:animate-bounce bg-brand-hover hover:bg-brand-hover mx-auto"
+            class=" hover:animate-bounce bg-brand-hover hover:bg-brand-hover mx-auto sm:mb-5"
             style="text-decoration: none;"
           />
       </div>
@@ -97,6 +92,8 @@ hero:
     </div>
   </div>
 </section>
+</div>
+
 
 <script setup lang="ts">
 
@@ -108,6 +105,10 @@ import ProjectCard from './components/ProjectCard.vue'
 
 <style scoped>
 
+  .vp-doc {
+    background-color: #d63ad8;
+  }
+  
   h2 {
     align-items: center;
     text-align: center;
@@ -133,7 +134,7 @@ import ProjectCard from './components/ProjectCard.vue'
   transform: translateZ(0); 
 }
 
-@keyframes showup {
+/* @keyframes showup {
   0% {
     opacity: 0;
   }
@@ -146,7 +147,7 @@ import ProjectCard from './components/ProjectCard.vue'
   100% {
     opacity: 0;
   }
-}
+} */
 
   
   .VPHero .main .text{
