@@ -24,7 +24,7 @@ hero:
 
 ---
 
-<div class="bg-blue-100 m-0 md!pb-10 px-5 lg:px-5 pb-5" >
+<div class="m-0 md!pb-10 px-5 lg:px-5 pb-5" >
  
 ## Mes projets
 
@@ -50,6 +50,25 @@ hero:
     image="/Accueil_sizodor.png"
     description="Maquette de site pour un centre de coiffure"
   />
+  <ProjectCard
+    title="Cathcookies"
+    href="/portfolio/cathcookiz"
+    image="/facebook_Profile_cathcookiz.png"
+    description= "Templates Web de réseaux sociaux pour une marque de cookie"
+  />
+  <ProjectCard
+    title="Rhône l'élexir du père pascale"
+    href="https://www.behance.net/gallery/145658149/Affiche-et-banniere-de-vignoble"
+    image="/Affiche_vin_bio.jpg"
+    description="Affiche et bannière web afin de promouvoir la nouvelle bouteil du père pascale"
+  />
+  <!-- <ProjectCard
+    title="Sizodor"
+    href="https://www.figma.com/proto/nMsZgDg1NYrGEVm3zODKfm/Sizodor?page-id=69%3A1261&node-id=67-443&viewport=1848%2C878%2C0.06&t=rGdaUooJefCVKPsx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=67%3A443"
+    image="/Accueil_sizodor.png"
+    description="Maquette de site pour un centre de coiffure"
+  /> -->
+
 </div>
   <div class="flex justify-center items-center"> 
 </div>
@@ -105,9 +124,9 @@ import ProjectCard from './components/ProjectCard.vue'
 
 <style scoped>
 
-  .vp-doc {
+  /* .vp-doc {
     background-color: #d63ad8;
-  }
+  } */
   
   h2 {
     align-items: center;
