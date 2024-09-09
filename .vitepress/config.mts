@@ -1,4 +1,6 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, postcssIsolateStyles } from 'vitepress'
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -31,5 +33,18 @@ export default defineConfig({
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/catherinevu436-78/' },
       { icon: 'github', link: 'https://github.com/cathwoman' },
     ]
-  }
+  },
+  vite: {
+    css: {
+      postcss: {
+        plugins: [
+          postcssIsolateStyles({
+            includeFiles: [/vp-doc\.css/] // defaults to /base\.css/
+          }),
+          tailwindcss,
+          autoprefixer,
+        ],
+      },
+    },
+  },
 })
