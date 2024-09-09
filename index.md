@@ -51,16 +51,16 @@ hero:
     description="Maquette de site pour un centre de coiffure"
   />
   <ProjectCard
-    title="Cathcookies"
+    title="Cathcookiz"
     href="/portfolio/cathcookiz"
     image="/facebook_Profile_cathcookiz.png"
     description= "Templates Web de réseaux sociaux pour une marque de cookie"
   />
   <ProjectCard
-    title="Rhône l'élexir du père pascale"
+    title="Rhône l'elixir du père pascale"
     href="https://www.behance.net/gallery/145658149/Affiche-et-banniere-de-vignoble"
     image="/Affiche_vin_bio.jpg"
-    description="Affiche et bannière web afin de promouvoir la nouvelle bouteil du père pascale"
+    description="Affiche et bannière web afin de promouvoir la nouvelle bouteille du père Pascal"
   />
   <!-- <ProjectCard
     title="Sizodor"

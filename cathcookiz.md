@@ -5,14 +5,14 @@ prev: false
 next: false
 ---
 
-# Nom du Projet : Cathcookiz - Templates Web de réseaux sociaux
+# Cathcookiz - Templates Web de réseaux sociaux
 
 
-J'ai créé des templates Web de réseaux sociaux de Facebook et Instagram pour une marque de cookie.
+J'ai créé des templates Web de réseaux sociaux de Facebook et Instagram pour une marque de cookies.
 
 ## Description du Projet
 
-Ce projet consistait à créer des templates Web attrayants et cohérents pour les réseaux sociaux Facebook et Instagram d'une marque de cookies artisanaux, Cathcookiz. L'objectif était de renforcer l'identité visuelle de la marque en ligne et d'attirer l'attention des clients potentiels.
+Ce projet consistait à créer des templates Web attrayants et cohérents pour les réseaux sociaux Facebook et Instagram d'une marque de cookies artisanaux, *Cathcookiz*. L'objectif était de renforcer l'identité visuelle de la marque en ligne et d'attirer l'attention des clients potentiels.
 
 ## Objectifs
 
@@ -34,14 +34,15 @@ Ce projet consistait à créer des templates Web attrayants et cohérents pour l
 * **Adobe Photoshop/Illustrator/XD** : Conception des templates et des éléments graphiques.
 * **Plateformes de réseaux sociaux** : Intégration et tests des templates.
 
-## Résultats
+## Résultat
 
 * **Templates Web de réseaux sociaux attractifs et professionnels** pour Cathcookiz.
 * **Amélioration de la cohérence visuelle** de la marque en ligne.
 * **Augmentation de la visibilité** et de l'engagement sur les réseaux sociaux.
 
- ![facebook profil](portfolio/public/facebook_Profile_cathcookiz.png)
- ![instagram profil](portfolio/public/Instagram_profile_cathcookiz.png)
+ ![facebook profil](/facebook_Profile_cathcookiz.png)
+ 
+ ![instagram profil](/Instagram_Profile_cathcookiz.png)
 
 ## Leçons apprises
 
