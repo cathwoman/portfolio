@@ -57,7 +57,7 @@ hero:
     description= "Templates Web de réseaux sociaux pour une marque de cookie"
   />
   <ProjectCard
-    title="Rhône l'elixir du père pascale"
+    title="Rhône - L'élixir du Père Pascal"
     href="https://www.behance.net/gallery/145658149/Affiche-et-banniere-de-vignoble"
     image="/Affiche_vin_bio.jpg"
     description="Affiche et bannière web afin de promouvoir la nouvelle bouteille du père Pascal"
