@@ -62,12 +62,12 @@ hero:
     image="/Affiche_vin_bio.jpg"
     description="Affiche et bannière web afin de promouvoir la nouvelle bouteille du père Pascal"
   />
-  <!-- <ProjectCard
-    title="Sizodor"
-    href="https://www.figma.com/proto/nMsZgDg1NYrGEVm3zODKfm/Sizodor?page-id=69%3A1261&node-id=67-443&viewport=1848%2C878%2C0.06&t=rGdaUooJefCVKPsx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=67%3A443"
-    image="/Accueil_sizodor.png"
-    description="Maquette de site pour un centre de coiffure"
-  /> -->
+  <ProjectCard
+    title="Photo-montage"
+    href="/portfolio/photo-montage"
+    image="/illu_casque_Photoshop.jpg"
+    description="photomontage d'un casque et d'une souris"
+  />
 
 </div>
   <div class="flex justify-center items-center"> 

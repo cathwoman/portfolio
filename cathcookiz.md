@@ -8,8 +8,6 @@ next: false
 # Cathcookiz - Templates Web de réseaux sociaux
 
 
-J'ai créé des templates Web de réseaux sociaux de Facebook et Instagram pour une marque de cookies.
-
 ## Description du Projet
 
 Ce projet consistait à créer des templates Web attrayants et cohérents pour les réseaux sociaux Facebook et Instagram d'une marque de cookies artisanaux, *Cathcookiz*. L'objectif était de renforcer l'identité visuelle de la marque en ligne et d'attirer l'attention des clients potentiels.
