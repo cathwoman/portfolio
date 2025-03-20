@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 export default {
+  important: true,
   content: [
     './.vitepress/**/*.{js,ts,vue}',
     './**/*.{md,vue}',
