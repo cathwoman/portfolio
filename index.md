@@ -26,7 +26,7 @@ hero:
 
 <div class="m-0 md!pb-10 px-5 lg:px-5 pb-5" >
  
-## Mes projets
+<h2 class="text-2xl text-red-500">Mes projets</h2>
 
 <br/>
 <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-10 content-center justify-center">
