@@ -4,7 +4,7 @@ sidebar: false
 
 ---
 
-<div class="px-6 md:px-12">
+<div class="px-6 pb-12 md:px-12">
   <div class="py-6 md:py-12 h-[calc(100vh-64px)] overflow-auto relative">
     <div class="flex h-full flex-col md:flex-row gap-12 md:gap-20 justify-center">
       <div class="flex justify-center items-center">
@@ -29,14 +29,49 @@ sidebar: false
       </a>
     </div>
   </div>
-  <div>
+  <div class="w-full h-full flex flex-col items-center justify-center">
     <h2 id="Mes Realisations" class="text-3xl text-center font-bold mb-4">Mes realisations</h2>
+    <Carousel class="w-full" :opts="{ loop: true }" :plugins="[Autoplay({delay: 4000})]">
+      <CarouselContent>
+        <CarouselItem v-for="item in carousel_items" :key="item.href" class="basis-3/5">
+          <div class="p-1">
+            <AspectRatio :ratio="16 / 9">
+              <VPImage :image="item.img"/>
+            </AspectRatio>
+            <!-- <Card>
+              <CardContent class="flex items-center justify-center p-6 h-[720px]">
+                <span class="text-4xl font-semibold">{{ index + 1 }}</span>
+              </CardContent>
+            </Card> -->
+          </div>
+        </CarouselItem>
+      </CarouselContent>
+    </Carousel>
   </div>
 </div>
 
 
 
 <script setup lang="ts">
-    import { VPButton } from 'vitepress/theme'
-    import { VPImage } from 'vitepress/theme'
+  import { VPButton } from 'vitepress/theme'
+  import { VPImage } from 'vitepress/theme'
+  import { Card, CardContent } from '@/components/ui/card'
+  import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+  import { AspectRatio } from '@/components/ui/aspect-ratio'
+  import Autoplay from 'embla-carousel-autoplay'
+
+  const carousel_items = [
+    {
+      img: "/Accueil_sizodor.png",
+      href: "",
+    },
+    {
+      img: "/Accueil_the.png",
+      href: "",
+    },
+    {
+      img: "/Accueil_mariee_sauvage_coupe.webp",
+      href: "",
+    }
+  ]
 </script>

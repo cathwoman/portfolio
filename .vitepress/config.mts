@@ -1,6 +1,7 @@
 import { defineConfig, postcssIsolateStyles } from 'vitepress'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
+import path from "path";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -44,6 +45,12 @@ export default defineConfig({
           tailwindcss,
           autoprefixer,
         ],
+      },
+    },
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "../"),
+        "@server": path.resolve(__dirname, "../server/src"),
       },
     },
   },

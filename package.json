@@ -18,5 +18,11 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^13.0.0",
+    "embla-carousel-autoplay": "^8.5.2",
+    "embla-carousel-vue": "^8.5.2",
+    "reka-ui": "^2.1.1"
   }
 }
