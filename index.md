@@ -33,17 +33,16 @@ sidebar: false
     <h2 id="Mes Realisations" class="text-3xl text-center font-bold mb-4">Mes realisations</h2>
     <Carousel class="w-full" :opts="{ loop: true }" :plugins="[Autoplay({delay: 4000})]">
       <CarouselContent>
-        <CarouselItem v-for="item in carousel_items" :key="item.href" class="basis-3/5">
-          <div class="p-1">
-            <AspectRatio :ratio="16 / 9">
-              <VPImage :image="item.img"/>
-            </AspectRatio>
-            <!-- <Card>
-              <CardContent class="flex items-center justify-center p-6 h-[720px]">
-                <span class="text-4xl font-semibold">{{ index + 1 }}</span>
+        <CarouselItem v-for="item in carousel_items" :key="item.href" class="basis-4/5 md:basis-3/5">
+            <Card>
+              <CardContent class="flex items-center justify-center">
+                  <AspectRatio :ratio="16 / 9">
+                  <a :href="item.href">
+                    <VPImage :image="item.img" class="object-fill"/>
+                  </a>
+                  </AspectRatio>
               </CardContent>
-            </Card> -->
-          </div>
+            </Card>
         </CarouselItem>
       </CarouselContent>
     </Carousel>
@@ -63,15 +62,15 @@ sidebar: false
   const carousel_items = [
     {
       img: "/Accueil_sizodor.png",
-      href: "",
+      href: "https://www.figma.com/proto/nMsZgDg1NYrGEVm3zODKfm/Sizodor?page-id=69%3A1261&node-id=67-443&viewport=1848%2C878%2C0.06&t=rGdaUooJefCVKPsx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=67%3A443",
     },
     {
       img: "/Accueil_the.png",
-      href: "",
+      href: "https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde",
     },
     {
       img: "/Accueil_mariee_sauvage_coupe.webp",
-      href: "",
+      href: "https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z",
     }
   ]
 </script>
