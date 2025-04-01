@@ -31,9 +31,9 @@ sidebar: false
   </div>
   <div class="w-full h-full flex flex-col items-center justify-center">
     <h2 id="Mes Realisations" class="text-3xl text-center font-bold mb-4">Mes realisations</h2>
-    <Carousel class="w-full" :opts="{ loop: true }" :plugins="[Autoplay({delay: 4000})]">
+    <Carousel class="w-full" :opts="{ loop: true }" :plugins="[Autoplay({delay: 4000})]" @init-api="setApi">
       <CarouselContent>
-        <CarouselItem v-for="item in carousel_items" :key="item.href" class="basis-4/5 md:basis-3/5">
+        <CarouselItem v-for="item in carousel_items" :key="item.href" class="embla__slide__number basis-4/5 md:basis-3/5">
             <Card>
               <CardContent class="flex items-center justify-center">
                   <AspectRatio :ratio="16 / 9">
@@ -52,25 +52,109 @@ sidebar: false
 
 
 <script setup lang="ts">
-  import { VPButton } from 'vitepress/theme'
-  import { VPImage } from 'vitepress/theme'
-  import { Card, CardContent } from '@/components/ui/card'
-  import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-  import { AspectRatio } from '@/components/ui/aspect-ratio'
-  import Autoplay from 'embla-carousel-autoplay'
+import { Card, CardContent } from '@/components/ui/card'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { ref, onUnmounted, watch } from 'vue'
+import { VPButton, VPImage } from 'vitepress/theme'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel'
+import Autoplay from 'embla-carousel-autoplay'
+import { watchOnce } from '@vueuse/core'
 
-  const carousel_items = [
-    {
-      img: "/Accueil_sizodor.png",
-      href: "https://www.figma.com/proto/nMsZgDg1NYrGEVm3zODKfm/Sizodor?page-id=69%3A1261&node-id=67-443&viewport=1848%2C878%2C0.06&t=rGdaUooJefCVKPsx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=67%3A443",
-    },
-    {
-      img: "/Accueil_the.png",
-      href: "https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde",
-    },
-    {
-      img: "/Accueil_mariee_sauvage_coupe.webp",
-      href: "https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z",
-    }
-  ]
+const api = ref<CarouselApi>()
+
+function setApi(val: CarouselApi) {
+  api.value = val
+}
+
+const TWEEN_FACTOR_BASE = 0.52
+let tweenFactor = 0
+let tweenNodes: HTMLElement[] = []
+
+const numberWithinRange = (number: number, min: number, max: number): number =>
+  Math.min(Math.max(number, min), max)
+
+const setTweenNodes = (emblaApi: EmblaCarouselType): void => {
+  tweenNodes = emblaApi.slideNodes()
+}
+
+const setTweenFactor = (emblaApi: EmblaCarouselType): void => {
+  tweenFactor = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
+}
+
+const tweenScale = (
+  emblaApi: EmblaCarouselType,
+  eventName?: EmblaEventType
+): void => {
+  const engine = emblaApi.internalEngine()
+  const scrollProgress = emblaApi.scrollProgress()
+  const slidesInView = emblaApi.slidesInView()
+  const isScrollEvent = eventName === 'scroll'
+
+  emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
+    let diffToTarget = scrollSnap - scrollProgress
+    const slidesInSnap = engine.slideRegistry[snapIndex]
+
+    slidesInSnap.forEach((slideIndex) => {
+      if (isScrollEvent && !slidesInView.includes(slideIndex)) return
+
+      if (engine.options.loop) {
+        engine.slideLooper.loopPoints.forEach((loopItem) => {
+          const target = loopItem.target()
+
+          if (slideIndex === loopItem.index && target !== 0) {
+            const sign = Math.sign(target)
+
+            if (sign === -1) {
+              diffToTarget = scrollSnap - (1 + scrollProgress)
+            }
+            if (sign === 1) {
+              diffToTarget = scrollSnap + (1 - scrollProgress)
+            }
+          }
+        })
+      }
+
+      const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor)
+      const scale = numberWithinRange(tweenValue, 0, 1).toString()
+      const tweenNode = tweenNodes[slideIndex]
+      console.log('tweenNode', tweenNode)
+      tweenNode.style.transform = `scale(${scale})`
+    })
+  })
+}
+
+watchOnce(api, (api) => {
+  if (!api)
+    return
+
+  setTweenNodes(api)
+  setTweenFactor(api)
+  tweenScale(api)
+
+  api
+    .on('reInit', setTweenNodes)
+    .on('reInit', setTweenFactor)
+    .on('reInit', tweenScale)
+    .on('scroll', tweenScale)
+    .on('slideFocus', tweenScale)
+
+  return (): void => {
+    tweenNodes.forEach((slide) => slide.removeAttribute('style'))
+  }
+})
+
+const carousel_items = [
+  {
+    img: "/Accueil_sizodor.png",
+    href: "https://www.figma.com/proto/nMsZgDg1NYrGEVm3zODKfm/Sizodor?page-id=69%3A1261&node-id=67-443&viewport=1848%2C878%2C0.06&t=rGdaUooJefCVKPsx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=67%3A443",
+  },
+  {
+    img: "/Accueil_the.png",
+    href: "https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde",
+  },
+  {
+    img: "/Accueil_mariee_sauvage_coupe.webp",
+    href: "https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z",
+  }
+]
 </script>
