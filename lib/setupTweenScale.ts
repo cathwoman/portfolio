@@ -94,8 +94,7 @@ export const setupTweenScale = (emblaApi: EmblaCarouselType): (() => void) => {
       if (slide) slide.removeAttribute('style')
     })
     // Optionally remove listeners if Embla doesn't do it automatically on destroy
-    // emblaApi.off('reInit', ...)
-    // emblaApi.off('scroll', tweenScale)
-    // emblaApi.off('select', tweenScale)
+    emblaApi.off('scroll', tweenScale)
+    emblaApi.off('select', tweenScale)
   }
 }
