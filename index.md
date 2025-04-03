@@ -4,103 +4,128 @@ sidebar: false
 
 ---
 
-<div class="px-6 pb-12 md:px-12">
-  <div class="py-6 md:py-12 h-[calc(100vh-64px)] overflow-auto relative">
-    <div class="flex h-full flex-col md:flex-row gap-12 md:gap-20 justify-center">
-      <div class="flex justify-center items-center">
-        <div class="flex flex-col max-w-xl items-center justify-center">
-          <h1 class="text-4xl font-bold mb-4">Designer UX/UI</h1>
-          <p class="text-4xl font-bold mb-4 text-secondary text-center">Des experiences uniques, comme votre business</p>
-          <p class="text-lg text-gray-700 mb-8 text-center">Des experiences uniques, comme votre business</p>
-          <div class="flex flex-row gap-4 lg:gap-5">
-            <VPButton theme="brand" text="Explorer mes realisations" href="#Mes Realisations"/>
-            <VPButton theme="alt" text="Me contacter" href="https://www.linkedin.com/in/catherinevu436-78/"/>
+<div class="px-6 md:px-12">
+  <section
+    id="hero"
+    aria-labelledby="hero-heading"
+    class="h-[calc(100vh-64px)] relative flex flex-col justify-center"
+  >
+    <div class="max-w-screen-xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row gap-12 md:gap-20 items-center justify-center">
+        <div class="flex-1 flex justify-center items-center text-center md:text-left">
+          <div class="max-w-xl">
+             <h1 id="hero-heading" class="text-4xl font-bold mb-4">Designer UX/UI</h1>
+            <p class="text-4xl font-bold mb-4 text-secondary">Des experiences uniques, comme votre business</p>
+            <p class="text-lg text-gray-700 mb-8">Je conçois des interfaces digitales intuitives et esthétiques pour créer des expériences mémorables.</p>
+            <div class="flex flex-row gap-4 lg:gap-5 justify-center md:justify-start">
+              <VPButton theme="brand" text="Explorer mes realisations" href="#mes-realisations"/>
+              <VPButton theme="alt" text="Me contacter" href="https://www.linkedin.com/in/catherinevu436-78/"/>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="flex justify-center items-center relative">
-        <VPImage image="/ui_ux_designer.png" alt="UI UX Designer" class="z-1 w-96 h-96"/>
-        <VPImage image="/hero_image_background.png" alt="background_shape" class="-z-10 w-96 h-96 absolute"/>
+        <div class="flex-1 flex justify-center items-center relative mt-10 md:mt-0">
+          <VPImage image="/ui_ux_designer.png" alt="UI UX Designer" class="z-10 w-80 h-80 md:w-96 md:h-96 object-contain"/>
+          <VPImage image="/hero_image_background.png" alt="background_shape" class="-z-10 w-80 h-80 md:w-96 md:h-96 absolute object-contain"/>
+        </div>
       </div>
     </div>
-    <div class="absolute bottom-4 md:bottom-20 left-1/2 -translate-x-1/2">
-      <a href="#Mes Realisations">
-        <VPImage image="/down_arrow.png" class="hidden md:flex w-14 h-14"/>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+       <a href="#mes-realisations">
+        <VPImage image="/down_arrow.png" class="hidden md:flex w-12 h-12 hover:opacity-80 transition-opacity"/>
       </a>
     </div>
-  </div>
-  <div class="w-full h-full flex flex-col items-center justify-center">
-    <h2 id="Mes Realisations" class="text-3xl text-center font-bold mb-4">Mes realisations</h2>
-    <Carousel
-      class="w-full"
-      :opts="{ loop: true, align: 'center' }"
-      :plugins="[Autoplay({ delay: 4000, stopOnInteraction: false })]"
-      @init-api="setApi"
-    >
-      <CarouselContent class="w-full">
-        <CarouselItem
-          v-for="(item, index) in carousel_items"
-          :key="index"
-          class="pl-2 embla__slide__number"
-        >
-            <Card>
-              <CardContent class="flex items-center justify-center p-0"> <AspectRatio :ratio="16 / 9">
-                  <a :href="item.href" target="_blank" rel="noopener noreferrer">
-                    <VPImage :image="item.img" alt="Project image" class="object-cover w-full h-full rounded-lg"/>
-                  </a>
+  </section>
+  <section
+    id="mes-realisations"
+    aria-labelledby="realisations-heading"
+    class="py-16 md:py-20"
+  >
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+      <h2 id="realisations-heading" class="text-3xl text-center font-bold mb-12">Mes realisations</h2>
+      <Carousel
+        class="w-full max-w-5xl"
+        :opts="{ loop: true, align: 'center' }"
+        :plugins="[Autoplay({ delay: 4000, stopOnInteraction: false })]"
+        @init-api="setApi"
+      >
+        <CarouselContent class="-ml-4"> <CarouselItem
+            v-for="(item, index) in carousel_items"
+            :key="index"
+            class="pl-4 md:basis-1/2 lg:basis-1/3"
+          >
+              <Card class="overflow-hidden"> <CardContent class="flex items-center justify-center p-0">
+                  <AspectRatio :ratio="16 / 9">
+                    <a :href="item.href" target="_blank" rel="noopener noreferrer" class="block hover:opacity-90 transition-opacity">
+                      <VPImage :image="item.img" alt="Project image" class="object-cover w-full h-full"/>
+                      </a>
                   </AspectRatio>
-              </CardContent>
-            </Card>
-        </CarouselItem>
-      </CarouselContent>
-      </Carousel>
-  </div>
-  <div class="w-full h-full flex flex-col items-center justify-center py-12">
-    <h2 class="text-3xl text-center font-bold mb-4">Mes services</h2>
-    <div class="flex flex-col md:flex-row gap-12 md:gap-20 justify-center">
-      <Card v-for="(item, index) in card_items" :key="index" class="w-full md:w-96">
-        <CardHeader>
-          <VPImage :image="item.img" alt="UI UX Designer"/>
-          <CardTitle>{{ item.title }}</CardTitle>
-          <CardDescription>{{ item.description }}</CardDescription>
-        </CardHeader>
-      </Card>
+                </CardContent>
+                </Card>
+          </CarouselItem>
+        </CarouselContent>
+        </Carousel>
     </div>
-    <div class="flex flex-row py-8">
-      <VPButton theme="brand" text="Discutons de votre projet" href="https://www.linkedin.com/in/catherinevu436-78/"/>
-    </div>
-  </div>
-
-  <div class="w-full h-full flex flex-col items-center justify-center py-12">
-    <h2 class="text-3xl text-center font-bold mb-4">Mes formations</h2>
-    <div class="flex flex-col md:flex-row gap-12 md:gap-20 justify-center">
-      <Card v-for="(item, index) in formations" :key="index" class="w-full md:w-96">
-        <CardHeader>
-          <CardTitle>{{ item.title }}</CardTitle>
-          <CardDescription>{{ item.description }}</CardDescription>
-        </CardHeader>
-      </Card>
-    </div>
-  </div>
-  <div class="w-full h-full flex flex-col items-center justify-center py-12">
-    <h2 class="text-3xl text-center font-bold mb-4">A propos de moi</h2>
-    <Card>
-      <div class="flex flex-row">
-        <div class="flex flex-col">
+  </section>
+  <section
+    id="services"
+    aria-labelledby="services-heading"
+    class="py-16 md:py-20 bg-gray-50"
+  >
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+      <h2 id="services-heading" class="text-3xl text-center font-bold mb-12">Mes services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <Card v-for="(item, index) in card_items" :key="index" class="flex flex-col">
           <CardHeader>
-            <CardTitle>Designer UX/UI</CardTitle>
-            <CardDescription>Je suis une designer UX/UI passionnée par la conception d'interfaces digitales intuitives et esthétiques. Je mets mes compétences au service de votre projet pour créer des expériences uniques et mémorables.</CardDescription>
+            <VPImage :image="item.img" alt="" class="w-full h-48 object-cover mb-4 rounded-t-lg"/>
+            <CardTitle>{{ item.title }}</CardTitle>
+            <CardDescription>{{ item.description }}</CardDescription>
           </CardHeader>
-          <CardContent>
-            <VPButton theme="brand" text="Me contacter" href="https://www.linkedin.com/in/catherinevu436-78/"/>
-          </CardContent>
-        </div>
-        <CardHeader>
-          <VPImage image="/ui_ux_designer.png" alt="UI UX Designer"/>
-        </CardHeader>
+          </Card>
       </div>
-    </Card>
-  </div>
+      <div class="mt-12">
+        <VPButton theme="brand" text="Discutons de votre projet" href="https://www.linkedin.com/in/catherinevu436-78/"/>
+      </div>
+    </div>
+  </section>
+  <section
+    id="formations"
+    aria-labelledby="formations-heading"
+    class="py-16 md:py-20"
+  >
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+      <h2 id="formations-heading" class="text-3xl text-center font-bold mb-12">Mes formations</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+         <Card v-for="(item, index) in formations" :key="index" class="w-full flex flex-col">
+          <CardHeader class="flex-grow"> <CardTitle>{{ item.title }}</CardTitle>
+            <CardDescription>{{ item.description }}</CardDescription>
+          </CardHeader>
+          <CardContent> <div class="flex flex-row items-center pt-4 border-t border-gray-200 mt-4"> <VPImage :image="item.image" alt="Formation image" class="max-w-12 max-h-12 object-cover"/> <span class="ml-4 text-sm text-gray-600">{{ item.date }}</span> </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </section>
+  <section
+    id="a-propos"
+    aria-labelledby="about-heading"
+    class="py-16 md:py-20 bg-gray-50"
+  >
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+      <h2 id="about-heading" class="text-3xl text-center font-bold mb-12">À propos de moi</h2>
+      <Card class="w-full max-w-4xl overflow-hidden"> <div class="flex flex-col md:flex-row items-center">
+          <div class="flex-1 p-6 md:p-8"> <CardDescription class="text-lg mb-6"> Je suis une designer UX/UI passionnée par la conception d'interfaces digitales intuitives et esthétiques. Je mets mes compétences au service de votre projet pour créer des expériences uniques et mémorables.
+            </CardDescription>
+            <VPButton theme="brand" text="Me contacter" href="https://www.linkedin.com/in/catherinevu436-78/"/>
+          </div>
+          <div class="w-full md:w-1/3 lg:w-1/2 flex-shrink-0">
+             <AspectRatio :ratio="1 / 1" class="bg-gray-100">
+               <VPImage image="/ui_ux_designer.png" alt="Portrait de Catherine Vu" class="object-cover w-full h-full"/>
+             </AspectRatio>
+          </div>
+        </div>
+      </Card>
+    </div>
+  </section>
 </div>
 
 
@@ -263,19 +288,22 @@ const card_items = [
 
 const formations = [
   {
-    date: "Janvier 2025 - aujourd’hui",
+    date: "Janvier 2025 - aujourd'hui",
     title: "Certification Google designer ux",
     description: "Fondamentaux du design ux",
+    image: "/google.png",
   },
   {
     date: "Janvier - Décembre 2022",
     title: "Titre professionnel Concepteur Designer UI",
-    description: "Fondamentaux du design graphique, typographie, identité visuelle et introduction au design d'interface.Fondamentaux du design graphique, typographie, identité visuelle et introduction au design d'interface.",
+    description: "Fondamentaux du design graphique, typographie, identité visuelle et introduction au design d'interface.",
+    image: "/online_forma_pro.png",
   },
   {
     date: "Septembre 2019 - Juillet 2021",
     title: "BTS SNIR",
-    description: "application et apprentissage de l’informatique",
+    description: "application et apprentissage de l'informatique",
+    image: "/bts_snir.png",
   }
 ]
 </script>
