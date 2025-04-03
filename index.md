@@ -263,8 +263,14 @@ const carousel_items = [
     href: "https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde",
   },
   {
-    img: "/Accueil_mariee_sauvage_coupe.webp",
+    img: "/mockup_mariee_sauvage.png",
     href: "https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z",
+    backgroundColor: "bg-[#C5DADE]",
+  },
+  {
+    img: "/instagram_mockup.png",
+    href: "https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z",
+    backgroundColor: "bg-[#D29ABF]",
   }
 ]
 
