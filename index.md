@@ -319,7 +319,7 @@ const formations = [
     date: "Septembre 2019 - Juillet 2021",
     title: "BTS SNIR",
     description: "application et apprentissage de l'informatique",
-    image: "/bts_snir.png",
+    image: "/logo-dhuoda.png",
   }
 ]
 </script>
