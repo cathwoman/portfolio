@@ -40,24 +40,26 @@ sidebar: false
     aria-labelledby="realisations-heading"
     class="py-16 md:py-20"
   >
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
       <h2 id="realisations-heading" class="text-3xl text-center font-bold mb-12">Mes realisations</h2>
       <Carousel
-        class="w-full max-w-5xl"
-        :opts="{ loop: true, align: 'center' }"
+        class="w-full"
+        :opts="{ loop: true}"
         :plugins="[Autoplay({ delay: 4000, stopOnInteraction: false })]"
         @init-api="setApi"
       >
-        <CarouselContent class="-ml-4"> <CarouselItem
+        <CarouselContent >
+          <CarouselItem
             v-for="(item, index) in carousel_items"
             :key="index"
-            class="pl-4 md:basis-1/2 lg:basis-1/3"
+            class="pl-4 md:basis-1/2 lg:basis-2/3"
           >
-              <Card class="overflow-hidden"> <CardContent class="flex items-center justify-center p-0">
+              <Card class="overflow-hidden">
+                <CardContent class="flex items-center justify-center p-0">
                   <AspectRatio :ratio="16 / 9">
                     <a :href="item.href" target="_blank" rel="noopener noreferrer" class="block hover:opacity-90 transition-opacity">
                       <VPImage :image="item.img" alt="Project image" class="object-cover w-full h-full"/>
-                      </a>
+                    </a>
                   </AspectRatio>
                 </CardContent>
                 </Card>
@@ -111,19 +113,27 @@ sidebar: false
     class="py-16 md:py-20 bg-gray-50"
   >
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
-      <h2 id="about-heading" class="text-3xl text-center font-bold mb-12">À propos de moi</h2>
-      <Card class="w-full max-w-4xl overflow-hidden"> <div class="flex flex-col md:flex-row items-center">
-          <div class="flex-1 p-6 md:p-8"> <CardDescription class="text-lg mb-6"> Je suis une designer UX/UI passionnée par la conception d'interfaces digitales intuitives et esthétiques. Je mets mes compétences au service de votre projet pour créer des expériences uniques et mémorables.
-            </CardDescription>
-            <VPButton theme="brand" text="Me contacter" href="https://www.linkedin.com/in/catherinevu436-78/"/>
+      <Card class="w-full max-w-4xl overflow-hidden">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="flex flex-col">
+            <CardHeader>
+              <h2 id="about-heading" class="text-3xl text-center font-bold">À propos de moi</h2>
+            </CardHeader>
+            <CardContent class="flex-1 p-6 md:p-8">
+              <CardDescription class="text-lg mb-6"> Je suis une designer UX/UI passionnée par la conception d'interfaces digitales intuitives et esthétiques. Je mets mes compétences au service de votre projet pour créer des expériences uniques et mémorables.
+              </CardDescription>
+              <div class="flex items-center justify-center py-6">
+                <VPButton theme="brand" text="Me contacter" href="https://www.linkedin.com/in/catherinevu436-78/"/>
+              </div>
+            </CardContent>
           </div>
           <div class="w-full md:w-1/3 lg:w-1/2 flex-shrink-0">
-             <AspectRatio :ratio="1 / 1" class="bg-gray-100">
-               <VPImage image="/ui_ux_designer.png" alt="Portrait de Catherine Vu" class="object-cover w-full h-full"/>
-             </AspectRatio>
+            <AspectRatio :ratio="1/1" class="bg-gray-100">
+              <VPImage image="/photo_identite.jpeg" alt="Portrait de Catherine Vu" class="object-cover w-full h-full"/>
+            </AspectRatio>
           </div>
-        </div>
-      </Card>
+          </div>
+          </Card>
     </div>
   </section>
 </div>
@@ -197,7 +207,7 @@ const setupTweenScale = (emblaApi: EmblaCarouselType): { cleanup: () => void } =
         const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor)
         const scale = numberWithinRange(tweenValue, 0, 1).toString()
         const tweenNode = tweenNodes[slideIndex]
-        tweenNode.style.flexBasis = `scale(${scale})`
+        // tweenNode.style.flexBasis = `scale(${scale})`
       })
     })
   }
@@ -236,10 +246,10 @@ watchOnce(api, (emblaApi) => {
 
 // Ensure cleanup happens when the component unmounts or api changes
 watch(api, (newApi, oldApi, onInvalidate) => {
-    if (cleanupTween) {
-        cleanupTween(); // Clean up previous instance listeners/styles
-        cleanupTween = null;
-    }
+    // if (cleanupTween) {
+    //     cleanupTween(); // Clean up previous instance listeners/styles
+    //     cleanupTween = null;
+    // }
     if (newApi) {
         const { cleanup } = setupTweenScale(newApi);
         cleanupTween = cleanup; // Store new cleanup function
@@ -269,7 +279,7 @@ const carousel_items = [
   },
   {
     img: "/instagram_mockup.png",
-    href: "https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z",
+    href: "/portfolio/cathcookiz",
     backgroundColor: "bg-[#D29ABF]",
   }
 ]
@@ -278,12 +288,12 @@ const card_items = [
   {
     title: "UX Design",
     description: "Je conçois des parcours intuitifs et fluides grâce à une approche centrée sur l'utilisateur.",
-    img: "/ui_ux_designer.png",
+    img: "/ux_design.png",
   },
   {
     title: "UI Design",
     description: "Je transforme vos idées en interfaces modernes qui séduisent vos clients et boostent votre image de marque",
-    img: "/ui_ux_designer.png",
+    img: "/ui_design.png",
   },
   {
     title: "Design system",

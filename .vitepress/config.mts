@@ -5,6 +5,7 @@ import path from "path";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  appearance: false,
   head: [['link', { rel: 'icon', href: '/portfolio/favicon.ico' }]],
   title: "Catherine VU - Designer UX UI",
   description: "Un site pour mes projets de design",
