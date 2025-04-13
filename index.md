@@ -268,18 +268,16 @@ watch(api, (newApi, oldApi, onInvalidate) => {
 const carousel_items = [
   {
     img: "/Accueil_sizodor.png",
-    href: "/portfolio/sizodor",
+    href: "https://www.figma.com/proto/nMsZgDg1NYrGEVm3zODKfm/Sizodor?page-id=69%3A1261&node-id=67-443&viewport=1848%2C878%2C0.06&t=rGdaUooJefCVKPsx-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=67%3A443",
   },
   {
     img: "/Accueil_the.png",
-    href: "/portfolio/the-du-monde",
-
+    href: "https://www.behance.net/gallery/153322811/Maquette-site-vitrine-fictifs-Ths-du-Monde",
   },
   {
     img: "/mockup_mariee_sauvage.png",
-    href: "/portfolio/mariee_sauvage",
+    href: "https://www.figma.com/proto/VNwXG9a8Bi28nGVvRSekyA/Mari%C3%A9e-Sauvage?page-id=60%3A38&node-id=337-228&viewport=231%2C171%2C0.03&t=G3Cc01n2qlgEXg0R-1&scaling=scale-down&content-scaling=z",
     backgroundColor: "bg-[#C5DADE]",
-    
   },
   {
     img: "/instagram_mockup.png",
