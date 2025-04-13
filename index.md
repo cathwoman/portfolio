@@ -4,21 +4,21 @@ sidebar: false
 
 ---
 
-<div class="px-6 md:px-12">
+<div class="px-6 md:px-12 mb-64">
   <section
     id="hero"
     aria-labelledby="hero-heading"
     class="h-[calc(100vh-64px)] relative flex flex-col justify-center"
   >
-    <div class="max-w-screen-xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto w-full px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row gap-12 md:gap-20 items-center justify-center">
         <div class="flex-1 flex justify-center items-center text-center md:text-left">
           <div class="max-w-xl">
-             <h1 id="hero-heading" class="text-4xl font-bold mb-4">Designer UX/UI</h1>
-            <p class="text-4xl font-bold mb-4 text-secondary">Des experiences uniques, comme votre business</p>
-            <p class="text-lg text-gray-700 mb-8">Je conçois des interfaces digitales intuitives et esthétiques pour créer des expériences mémorables.</p>
+            <h1 id="hero-heading" class="text-4xl font-bold mb-4 text-secondary">Catherine VU - Designer UX/UI</h1>
+            <h2 class="text-4xl font-bold mb-4">Un design unique, comme votre business</h2>
+            <p class="text-lg text-gray-600 mb-8 font-medium">Votre site internet est le visage de votre entreprise. Je transforme votre vision en interfaces web intuitives pour des utilisateurs satisfaits.</p>
             <div class="flex flex-row gap-4 lg:gap-5 justify-center md:justify-start">
-              <VPButton theme="brand" text="Explorer mes realisations" href="#mes-realisations"/>
+              <VPButton theme="brand" text="Explorer mes créations" href="#mes-realisations"/>
               <VPButton theme="alt" text="Me contacter" href="https://www.linkedin.com/in/catherinevu436-78/"/>
             </div>
           </div>
@@ -31,20 +31,20 @@ sidebar: false
     </div>
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
        <a href="#mes-realisations">
-        <VPImage image="/down_arrow.png" class="hidden md:flex w-12 h-12 hover:opacity-80 transition-opacity"/>
+        <VPImage image="/down_arrow.png" class="hidden md:flex w-16 h-16 hover:opacity-80 transition-opacity"/>
       </a>
     </div>
   </section>
   <section
     id="mes-realisations"
     aria-labelledby="realisations-heading"
-    class="py-16 md:py-20"
+    class="py-8"
   >
-    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
-      <h2 id="realisations-heading" class="text-3xl text-center font-bold mb-12">Mes realisations</h2>
+    <div class="w-full h-screen mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <h2 id="realisations-heading" class="text-3xl text-center font-bold md:mb-24 lg:mb-36">Mes créations</h2>
       <Carousel
         class="w-full"
-        :opts="{ loop: true}"
+        :opts="{ loop: true }"
         :plugins="[Autoplay({ delay: 4000, stopOnInteraction: false })]"
         @init-api="setApi"
       >
@@ -52,7 +52,7 @@ sidebar: false
           <CarouselItem
             v-for="(item, index) in carousel_items"
             :key="index"
-            class="pl-4 md:basis-1/2 lg:basis-2/3"
+            class="pl-4 md:basis-1/2 lg:basis-3/5"
           >
               <Card class="overflow-hidden">
                 <CardContent class="flex items-center justify-center p-0">
@@ -71,15 +71,15 @@ sidebar: false
   <section
     id="services"
     aria-labelledby="services-heading"
-    class="py-16 md:py-20 bg-gray-50"
+    class="bg-gray-50 md:h-[50vh]"
   >
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
       <h2 id="services-heading" class="text-3xl text-center font-bold mb-12">Mes services</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
         <Card v-for="(item, index) in card_items" :key="index" class="flex flex-col">
           <CardHeader>
             <VPImage :image="item.img" alt="" class="w-full h-48 object-cover mb-4 rounded-t-lg"/>
-            <CardTitle>{{ item.title }}</CardTitle>
+            <CardTitle class="text-xl">{{ item.title }}</CardTitle>
             <CardDescription>{{ item.description }}</CardDescription>
           </CardHeader>
           </Card>
@@ -92,13 +92,14 @@ sidebar: false
   <section
     id="formations"
     aria-labelledby="formations-heading"
-    class="py-16 md:py-20"
+    class="md:h-[50vh] pt-16 md:pt-24"
   >
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
       <h2 id="formations-heading" class="text-3xl text-center font-bold mb-12">Mes formations</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
          <Card v-for="(item, index) in formations" :key="index" class="w-full flex flex-col">
-          <CardHeader class="flex-grow"> <CardTitle>{{ item.title }}</CardTitle>
+          <CardHeader class="flex-grow">
+            <CardTitle class="text-xl">{{ item.title }}</CardTitle>
             <CardDescription>{{ item.description }}</CardDescription>
           </CardHeader>
           <CardContent> <div class="flex flex-row items-center pt-4 border-t border-gray-200 mt-4"> <VPImage :image="item.image" alt="Formation image" class="max-w-12 max-h-12 object-cover"/> <span class="ml-4 text-sm text-gray-600">{{ item.date }}</span> </div>
@@ -110,19 +111,20 @@ sidebar: false
   <section
     id="a-propos"
     aria-labelledby="about-heading"
-    class="py-16 md:py-20 bg-gray-50"
+    class="flex justify-center items-center md:h-[50vh] pt-16 md:pt-32"
   >
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
-      <Card class="w-full max-w-4xl overflow-hidden">
+    <div class="mx-auto max-w-[50vw] px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+      <Card class="overflow-hidden">
         <div class="flex flex-col md:flex-row items-center">
-          <div class="flex flex-col">
+          <div class="flex flex-col px-5">
             <CardHeader>
               <h2 id="about-heading" class="text-3xl text-center font-bold">À propos de moi</h2>
             </CardHeader>
-            <CardContent class="flex-1 p-6 md:p-8">
-              <CardDescription class="text-lg mb-6"> Je suis une designer UX/UI passionnée par la conception d'interfaces digitales intuitives et esthétiques. Je mets mes compétences au service de votre projet pour créer des expériences uniques et mémorables.
+            <CardContent class="p-4">
+              <CardDescription class="text-lg"> Je suis Catherine, une designer UX/UI passionnée par la création d'expériences digitales uniques. Je suis convaincue que chaque projet est unique, et c'est pourquoi je m'investis pleinement dans chaque collaboration.<br><br>
+              En plus du design, je suis passionnée par la patisserie, le crochet et tout ce qui ressemble à une licorne.
               </CardDescription>
-              <div class="flex items-center justify-center py-6">
+              <div class="flex items-center justify-center my-6">
                 <VPButton theme="brand" text="Me contacter" href="https://www.linkedin.com/in/catherinevu436-78/"/>
               </div>
             </CardContent>
@@ -132,8 +134,8 @@ sidebar: false
               <VPImage image="/photo_identite.jpeg" alt="Portrait de Catherine Vu" class="object-cover w-full h-full"/>
             </AspectRatio>
           </div>
-          </div>
-          </Card>
+        </div>
+      </Card>
     </div>
   </section>
 </div>
@@ -287,20 +289,22 @@ const carousel_items = [
 ]
 
 const card_items = [
+  // https://uxcam.com/blog/ux-statistics/
   {
     title: "UX Design",
-    description: "Je conçois des parcours intuitifs et fluides grâce à une approche centrée sur l'utilisateur.",
+    description: "Une UX optimisée booste les conversions jusqu’à 400%. Atteignez le plein potentiel de votre site avec une expérience utilisateur fluide et intuitive.",
     img: "/ux_design.png",
   },
   {
     title: "UI Design",
-    description: "Je transforme vos idées en interfaces modernes qui séduisent vos clients et boostent votre image de marque",
+    description: "75% des utilisateurs jugent la crédibilité d’un site web sur son design. Je rend votre business plus crédible à l'aide d’un design moderne et optimisé.",
     img: "/ui_design.png",
   },
+  // https://www.figma.com/blog/measuring-the-value-of-design-systems/
   {
     title: "Design system",
-    description: "Je développe des composants évolutifs qui unifient l’expérience digitale et renforcent l’identité de marque.",
-    img: "/ui_ux_designer.png",
+    description: "Réduisez votre temps de développement de 34% avec un design system efficace et adapté à votre projet.",
+    img: "/design_system.png",
   }
 ]
 
