@@ -1,0 +1,35 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+      "target": "ESNext", // Or your preferred JS target
+      "module": "ESNext",
+      "moduleResolution": "Bundler", // Recommended for modern tooling like Vite
+      "strict": true, // Enable strict type-checking (recommended)
+      "jsx": "preserve", // Important for Vue JSX/TSX support if needed
+      "skipLibCheck": true, // Skip type checking of declaration files
+      "esModuleInterop": true, // Allows default imports from commonjs modules
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true, // Allows importing JSON files
+      "isolatedModules": true, // Ensures files can be safely transpiled without relying on other imports
+      "noEmit": true, // Vite handles transpilation, TypeScript only does type checking
+      "baseUrl": ".", // Sets the base directory for path resolution
+      "paths": {
+        "@/*": ["./*"],
+      }
+    },
+    // Specify which files TypeScript should include
+    // Adjust these patterns based on your project structure
+    "include": [
+      ".vitepress/**/*.ts",
+      ".vitepress/**/*.vue",
+      "components/**/*.vue",
+      "tailwind.config.ts",
+      // Add other directories/files with TS/JS/Vue code if needed
+      // "src/**/*.ts",
+      // "src/**/*.d.ts",
+      // "src/**/*.tsx",
+      // "src/**/*.vue"
+    ],
+    // Exclude node_modules and potentially build output directories
+    "exclude": ["node_modules", "dist", ".vitepress/dist", ".vitepress/cache"]
+  }

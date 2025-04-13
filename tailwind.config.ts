@@ -8,70 +8,54 @@ export default {
   ],
   theme: {
     extend: {
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'var(--background)',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)',
         },
-        typing: {
-          "0%": {
-            width: "0%",
-            visibility: "hidden"
-          },
-          "100%": {
-            width: "100%"
-          }
+        secondary: {
+          DEFAULT: 'var(--secondary)',
+          foreground: 'var(--secondary)',
         },
-        blink: {
-          "50%": {
-            borderColor: "transparent"
-          },
-          "100%": {
-            borderColor: "white"
-          }
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'var(--accent)',
+          foreground: 'var(--accent-foreground)',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
         },
       },
-      animationDelay: {
-        '0': '0s',
-        '200': '200ms',
-        '400': '400ms',
-        '600': '600ms',
-        '800': '800ms',
-        '1000': '1000ms',
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
-      animation: {
-        'float': 'float 3s ease-in-out infinite',
-        'typing': "typing 2s steps(20) infinite alternate, blink .7s infinite"
+      borderRadius: {
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
+        sm: 'calc(var(--radius) - 4px)',
       },
     },
   },
-  variants: {
-    extend: {
-      animationDelay: ['responsive'],
-    },
-  },
-  plugins: [
-    function ({ addUtilities }) {
-      const newUtilities = {
-        '.animate-delay-200': {
-          'animation-delay': '200ms',
-        },
-        '.animate-delay-400': {
-          'animation-delay': '400ms',
-        },
-        '.animate-delay-600': {
-          'animation-delay': '600ms',
-        },
-        '.animate-delay-800': {
-          'animation-delay': '800ms',
-        },
-        '.animate-delay-1000': {
-          'animation-delay': '1000ms',
-        },
-      };
-      addUtilities(newUtilities, ['responsive', 'hover']);
-    },
-  ],
+  variants: {},
+  plugins: [require('tailwindcss-animate')],
   darkMode: 'class',
 } satisfies Config
 

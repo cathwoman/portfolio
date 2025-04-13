@@ -1,10 +1,26 @@
 import { defineConfig, postcssIsolateStyles } from 'vitepress'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
+import path from "path";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  head: [['link', { rel: 'icon', href: '/portfolio/favicon.ico' }]],
+  appearance: false,
+  head: [
+    ['link', { rel: 'icon', href: '/portfolio/favicon.ico' }],
+    [
+      'link',
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' }
+    ],
+    [
+      'link',
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
+    ],
+    [
+      'link',
+      { href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap', rel: 'stylesheet' }
+    ],
+  ],
   title: "Catherine VU - Designer UX UI",
   description: "Un site pour mes projets de design",
   base: '/portfolio/',
@@ -44,6 +60,12 @@ export default defineConfig({
           tailwindcss,
           autoprefixer,
         ],
+      },
+    },
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "../"),
+        "@server": path.resolve(__dirname, "../server/src"),
       },
     },
   },
