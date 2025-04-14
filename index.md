@@ -38,10 +38,10 @@ sidebar: false
   <section
     id="mes-realisations"
     aria-labelledby="realisations-heading"
-    class="py-8"
+    class="py-10"
   >
-    <div class="w-full h-screen mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-      <h2 id="realisations-heading" class="text-3xl text-center font-bold md:mb-24 lg:mb-36">Mes créations</h2>
+    <div class="w-full py-24 md:py-0 md:h-screen mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <h2 id="realisations-heading" class="text-3xl text-center font-bold mb-16 md:mb-24 lg:mb-36">Mes créations</h2>
       <Carousel
         class="w-full"
         :opts="{ loop: true }"
@@ -52,7 +52,7 @@ sidebar: false
           <CarouselItem
             v-for="(item, index) in carousel_items"
             :key="index"
-            class="pl-4 md:basis-1/2 lg:basis-3/5"
+            class="pl-4 basis-4/5 md:basis-1/2 lg:basis-3/5"
           >
               <Card class="overflow-hidden">
                 <CardContent class="flex items-center justify-center p-0">
@@ -71,7 +71,7 @@ sidebar: false
   <section
     id="services"
     aria-labelledby="services-heading"
-    class="bg-gray-50 md:h-[50vh]"
+    class="bg-gray-50 md:h-1/2"
   >
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
       <h2 id="services-heading" class="text-3xl text-center font-bold mb-12">Mes services</h2>
@@ -92,7 +92,7 @@ sidebar: false
   <section
     id="formations"
     aria-labelledby="formations-heading"
-    class="md:h-[50vh] pt-16 md:pt-24"
+    class="md:h-1/2 pt-16 md:pt-24"
   >
     <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
       <h2 id="formations-heading" class="text-3xl text-center font-bold mb-12">Mes formations</h2>
@@ -111,9 +111,9 @@ sidebar: false
   <section
     id="a-propos"
     aria-labelledby="about-heading"
-    class="flex justify-center items-center md:h-[50vh] pt-16 md:pt-32"
+    class="flex justify-center items-center md:h-1/2 pt-16 md:pt-32"
   >
-    <div class="mx-auto max-w-[50vw] px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+    <div class="mx-auto max-w-[75vw] px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
       <Card class="overflow-hidden">
         <div class="flex flex-col md:flex-row items-center">
           <div class="flex flex-col px-5">
